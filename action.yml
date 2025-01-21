@@ -140,7 +140,7 @@ runs:
           --pwfile="$PWFILE" \
           --auth="scram-sha-256" \
           --encoding="$DEFAULT_ENCODING" \
-          --locale="$DEFAULT_LOCALE" \
+          --no-locale \
           --no-instructions
 
         # Do not create unix sockets since they are created by default in the
