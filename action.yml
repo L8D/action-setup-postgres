@@ -180,7 +180,7 @@ runs:
         # [1] https://www.postgresql.org/docs/15/libpq-pgservice.html
         cat <<EOF > "$PGDATA/pg_service.conf"
         [${{ inputs.username }}]
-        host=localhost
+        host=0.0.0.0
         port=${{ inputs.port }}
         user=${{ inputs.username }}
         password=${{ inputs.password }}
