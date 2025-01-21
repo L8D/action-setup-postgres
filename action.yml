@@ -147,6 +147,7 @@ runs:
         # directory we have no permissions to (owned by system postgres user).
         echo "unix_socket_directories = ''" >> "$PGDATA/postgresql.conf"
         echo "port = ${{ inputs.port }}" >> "$PGDATA/postgresql.conf"
+        echo "max_connections = 500" >> "$PGDATA/postgresql.conf"
 
         if [ "${{ inputs.ssl }}" = "true" ]; then
           # On Windows, bash runs on top of MSYS2, which automatically converts
